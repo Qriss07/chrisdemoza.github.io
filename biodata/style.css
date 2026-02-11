@@ -40,42 +40,45 @@ body {
 }
 
 
-/* === NAVIGATION === */
-.nav {
-    margin-top: 20px;
+.hero-text {
     display: flex;
-    gap: 25px;
+    flex-direction: column;
+    gap: 18px; /* Jarak antar elemen */
 }
 
-.nav a {
-    position: relative;
+/* NAVIGATION */
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* supaya tidak tabrakan kalau layar kecil */
+}
+
+nav a {
     text-decoration: none;
     color: white;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
-    padding: 5px 0;
+    padding: 6px 0;
+    position: relative;
     transition: 0.3s ease;
 }
 
-/* Underline animasi modern */
-.nav a::after {
+/* Hover effect modern */
+nav a::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -4px;
+    bottom: -3px;
     width: 0%;
     height: 2px;
-    background: #00c3ff;
+    background: #ffd700;
     transition: 0.3s ease;
 }
 
-.nav a:hover {
-    color: #00c3ff;
-}
-
-.nav a:hover::after {
+nav a:hover::after {
     width: 100%;
 }
+
 
 
 .role {
@@ -185,6 +188,7 @@ footer {
 .portfolio-item:hover img {
     transform: scale(1.08);
 }
+
 
 
 
