@@ -36,13 +36,13 @@ body {
 }
 
 /* === NAVIGATION === */
-nav {
+.nav {
     margin-top: 20px;
     display: flex;
     gap: 25px;
 }
 
-nav a {
+.nav a {
     position: relative;
     text-decoration: none;
     color: white;
@@ -53,7 +53,7 @@ nav a {
 }
 
 /* Underline animasi modern */
-nav a::after {
+.nav a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -64,11 +64,11 @@ nav a::after {
     transition: 0.3s ease;
 }
 
-nav a:hover {
+.nav a:hover {
     color: #00c3ff;
 }
 
-nav a:hover::after {
+.nav a:hover::after {
     width: 100%;
 }
 
@@ -180,4 +180,5 @@ footer {
 .portfolio-item:hover img {
     transform: scale(1.08);
 }
+
 
