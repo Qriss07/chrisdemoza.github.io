@@ -35,6 +35,11 @@ body {
     margin-bottom: 8px;
 }
 
+.hero-text {
+    max-width: 500px;
+}
+
+
 /* === NAVIGATION === */
 .nav {
     margin-top: 20px;
@@ -180,5 +185,6 @@ footer {
 .portfolio-item:hover img {
     transform: scale(1.08);
 }
+
 
 
