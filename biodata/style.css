@@ -39,48 +39,6 @@ body {
     max-width: 500px;
 }
 
-
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    gap: 18px; /* Jarak antar elemen */
-}
-
-/* NAVIGATION */
-nav {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap; /* supaya tidak tabrakan kalau layar kecil */
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 6px 0;
-    position: relative;
-    transition: 0.3s ease;
-}
-
-/* Hover effect modern */
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0%;
-    height: 2px;
-    background: #ffd700;
-    transition: 0.3s ease;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-
-
 .role {
     font-size: 16px;
     opacity: 0.85;
@@ -119,6 +77,45 @@ nav a:hover::after {
     background: white;
     color: black;
     transform: translateY(-3px);
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* Jarak antar elemen */
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* supaya tidak tabrakan kalau layar kecil */
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 0;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Hover effect modern */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: #ffd700;
+    transition: 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 
