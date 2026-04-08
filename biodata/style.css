@@ -1,0 +1,421 @@
+:root {
+    --warm-bg: #f7f3ef;
+    --card-bg: #fffcf9;
+    --accent: #a35d79;
+    --text-dark: #4a443f;
+    --text-muted: #b0a498;
+    --border: #e8ded4;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+body {
+    background-color: var(--warm-bg);
+    color: var(--text-dark);
+    font-family: 'Times New Roman', serif;
+    display: flex;
+}
+
+/* --- Sidebar Left --- */
+.sidebar-left {
+    width: 220px; height: 100vh;
+    background: #fdfaf7;
+    position: fixed; left: 0;
+    padding: 40px 20px;
+    border-right: 1px solid var(--border);
+    display: flex; flex-direction: column;
+}
+
+.brand h1 { 
+    font-size: 1.5rem; 
+    letter-spacing: -1px; }
+.brand p { 
+    font-size: 10px; 
+    color: var(--text-muted); 
+    text-transform: uppercase; 
+    margin-bottom: 30px; 
+}
+
+.nav-links { 
+    list-style: none; 
+    flex-grow: 1; 
+}
+
+.nav-links li { 
+    margin-bottom: 15px; 
+}
+
+.nav-links a { 
+    text-decoration: none; 
+    color: var(--text-dark); 
+    font-size: 14px; 
+    transition: 0.3s; 
+    display: block; 
+}
+
+.nav-links li.active a { 
+    font-weight: bold; 
+    padding-left: 5px; 
+    border-left: 2px solid var(--accent); 
+    color: var(--accent); 
+}
+
+.nav-links a:hover { 
+    color: var(--accent); 
+    padding-left: 5px; 
+}
+
+.sidebar-footer { 
+    border-top: 1px solid var(--border); 
+    padding-top: 20px; 
+    margin-top: auto; 
+}
+
+.sidebar-footer a { 
+    display: flex; align-items: center; 
+    font-size: 12px; 
+    color: var(--text-muted); 
+    text-decoration: none; 
+    margin-bottom: 12px; 
+    transition: 0.3s;
+}
+
+.sidebar-footer a i { 
+    width: 20px; 
+    text-align: center; 
+    margin-right: 10px; 
+    font-size: 14px; 
+}
+
+.sidebar-footer a:hover { 
+    color: var(--accent); 
+    transform: translateX(3px); 
+}
+
+/* --- Main Content --- */
+.main-content { 
+    margin-left: 220px; 
+    margin-right: 60px; 
+    width: calc(100% - 280px); 
+    padding: 40px; 
+}
+
+.section { 
+    min-height: 50vh;
+    margin-bottom: 80px; 
+    padding-top: 20px; 
+}
+
+.section-title { 
+    font-size: 1.8rem; 
+    margin-bottom: 30px; 
+    font-weight: normal; 
+    border-bottom: 1px solid var(--border); 
+    padding-bottom: 10px; 
+}
+
+.bento-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+/* Home Section */
+.hero-card {
+    height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0,0,0,0.1)), url('https://via.placeholder.com/1200x400');
+    background-size: cover; background-position: center; border-radius: 12px;
+    display: flex; align-items: center; padding-left: 40px;
+}
+.hero-content h1 { 
+    color: rgb(8, 8, 8); 
+    font-size: 2.5rem; 
+    font-style: italic; 
+    font-weight: normal; 
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+}
+
+.hero-content p { 
+    color: rgb(7, 6, 6); 
+    opacity: 0.9; 
+    font-size: 1.1rem; 
+}
+
+/* --- About Section (DIPERBARUI TOTAL AGAR FOTO PROPORSIONAL) --- */
+.about-grid { 
+    display: flex; 
+    gap: 40px; /* Jarak antara foto dan teks */
+    align-items: flex-start; /* Sejajarkan foto dan teks dari atas */
+}
+
+/* Container Frame Foto (Format Portrait) */
+.profile-frame { 
+    width: 200px; /* Lebar bingkai tetap */
+    height: 300px; /* Tinggi bingkai disesuaikan agar portrait proporsional */
+    flex-shrink: 0; /* Mencegah bingkai gepeng jika layar mengecil */
+    border-radius: 12px; /* Membuat sudut membulat */
+    border: 4px solid white; /* Memberikan pinggiran putih seperti bingkai foto */
+    overflow: hidden; /* Mencegah gambar keluar dari bingkai */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Memberikan bayangan halus */
+}
+
+/* Selektor Gambar di dalam Frame */
+.profile-frame img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* KUNCINYA DI SINI: Gambar memenuhi bingkai portrait tanpa gepeng */
+    display: block;
+}
+
+.about-text { 
+    flex-grow: 1; 
+}
+
+.about-text h2 { 
+    font-size: 2.5rem; 
+    margin-bottom: 15px; 
+    font-weight: normal; }
+.about-text p { 
+    font-size: 1.1rem; 
+    line-height: 1.6; 
+    margin-bottom: 20px; 
+}
+.insta-link { 
+    color: var(--accent); 
+    text-decoration: none; 
+    font-size: 12px; 
+    font-weight: bold; 
+    margin-top: 10px; 
+    display: inline-block; 
+    transition: 0.3s; 
+}
+
+.insta-link:hover { 
+    letter-spacing: 1px; 
+}
+
+/* Biodata */
+.bio-row { 
+    display: flex; 
+    gap: 20px; 
+    margin-bottom: 15px; 
+}
+
+.bio-item { 
+    flex: 1; 
+    border: 1px solid var(--border); 
+    padding: 12px 15px; 
+    border-radius: 8px; 
+    background: white; 
+}
+
+.label { 
+    font-size: 9px; 
+    color: var(--text-muted); 
+    font-family: sans-serif; 
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+    display: block; 
+    margin-bottom: 5px; 
+}
+
+.bio-item p { 
+    font-size: 15px; 
+}
+
+/* Portfolio */
+.portfolio-grid { 
+    display: grid; 
+    grid-template-columns: 
+    repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; 
+    margin-top: 15px; 
+}
+
+.port-card { 
+    border: 1px solid var(--border); 
+    border-radius: 10px; 
+    overflow: hidden; 
+    background: white; 
+    transition: 0.3s; 
+    object-fit: cover;
+}
+
+.port-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05); 
+}
+
+.port-card img { 
+    width: 100%; 
+    height: 450px; 
+    object-fit: cover; 
+}
+
+.port-desc { 
+    padding: 
+    15px; 
+}
+
+.port-desc span { 
+    font-size: 9px; 
+    color: var(--accent); 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    font-family: sans-serif; 
+}
+
+.port-desc h4 { 
+    margin: 5px 0; 
+    font-size: 1.1rem; 
+    font-weight: 
+    normal; 
+}
+
+.port-desc p { 
+    font-size: 12px; 
+    color: var(--text-muted); 
+}
+
+/* Tables */
+.data-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+.data-table th { 
+    text-align: left; 
+    padding: 12px; 
+    font-size: 11px; 
+    color: var(--text-muted); 
+    border-bottom: 2px solid var(--border); 
+    text-transform: uppercase; 
+    font-family: sans-serif; 
+}
+
+.data-table td { 
+    padding: 15px 12px; 
+    border-bottom: 1px solid var(--border); 
+    font-size: 14px; 
+}
+
+.progress { 
+    background: #eee; 
+    height: 6px; 
+    border-radius: 3px; 
+    overflow: hidden; 
+}
+
+.bar { 
+    background: var(--accent); 
+    height: 100%; 
+    border-radius: 3px; 
+}
+
+.status-active { 
+    color: #2ecc71; 
+    font-weight: bold; 
+}
+
+/* --- Sidebar Right --- */
+.sidebar-right {
+    width: 60px; height: 100vh;
+    background: #fdfaf7;
+    position: fixed; right: 0;
+    display: flex; flex-direction: column; align-items: center;
+    padding: 40px 0; border-left: 1px solid var(--border);
+}
+
+.connect-text { 
+    writing-mode: vertical-rl; 
+    transform: rotate(180deg); 
+    letter-spacing: 5px; 
+    color: var(--accent); 
+    font-weight: bold; 
+    font-size: 12px; 
+    font-family: sans-serif; 
+    margin-bottom: 30px; 
+}
+
+.social-icons-vertical { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+    margin-top: auto; 
+}
+
+.social-icons-vertical a { 
+    color: var(--text-dark); 
+    font-size: 18px; 
+    transition: 0.3s; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 30px; 
+    height: 30px; 
+}
+
+.social-icons-vertical a:hover { 
+    color: var(--accent); 
+    transform: scale(1.2); 
+}
+
+/* Responsif Mobile */
+@media (max-width: 900px) {
+    .sidebar-left, .sidebar-right { display: none; }
+    .main-content { margin: 0; width: 100%; padding: 20px; }
+    .about-grid { flex-direction: column; align-items: center; text-align: center; }
+}
+
+/* Container di dalam <td> untuk kolom KEMAHIRAN */
+.data-table td:last-child {
+    display: flex;
+    align-items: center; /* Sejajar secara vertikal */
+    gap: 12px;           /* Jarak antara bar dan angka % */
+    min-width: 200px;    /* Memastikan kolom punya ruang cukup */
+}
+
+/* Latar belakang progress bar (jalur abu-abu) */
+.progress {
+    flex-grow: 1;        /* Bar akan mengambil sisa ruang yang tersedia */
+    background: #e8ded4; /* Warna krem sesuai tema */
+    height: 8px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Isi bar yang berwarna (animasi) */
+.bar {
+    background: var(--accent); /* Menggunakan variabel warna accent Anda */
+    height: 100%;
+    width: 0;                 /* Default 0 untuk dianimasikan oleh JS */
+    border-radius: 4px;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Gaya teks persentase */
+.percent-text {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--text-dark);
+    min-width: 35px;         /* Agar posisi teks angka tetap konsisten */
+    text-align: right;
+}
+
+/* Responsif: Jika di layar kecil teks % naik ke atas bar */
+@media (max-width: 600px) {
+    .data-table td:last-child {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .percent-text {
+        text-align: left;
+        order: -1; /* Pindahkan angka ke atas bar */
+    }
+}
